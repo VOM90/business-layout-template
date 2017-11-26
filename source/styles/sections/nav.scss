@@ -1,0 +1,52 @@
+.nav {
+	display: inline-block;
+	vertical-align: top;	
+	margin-right: 15px;
+	// margin-left: 165px;
+
+	@media (max-width: 1000px) {
+		margin-bottom: 25px;
+	}
+
+	&__link {
+		display: inline-block;
+		vertical-align: top;
+		padding: 18px;
+		font-family: $ff-main-bold;
+		text-decoration: none;
+		text-transform: capitalize;
+		color: $main-color;
+		transition: 0.3s;
+		font-size: 0.9rem;
+
+
+		&:hover,
+		&--active {
+			color: $second-color;
+	  }
+
+	  &:after {
+	  	content: '';
+	  	display: inline-block;
+	  	vertical-align: middle;
+	  	width: 5px;
+	  	height: 5px;
+	  	border-radius: 50%;
+	  	background: $main-color;
+			margin-left: 15px;
+	  }
+
+	  &:last-child:after {
+	  	display: none;
+	  }
+
+		@media (max-width: 530px) {
+			display: block;
+
+			&:after {
+				display: none;
+			}
+		}
+
+	}
+}
